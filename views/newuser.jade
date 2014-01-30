@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  br
+  p Please enter your username and password to register
+  br
+  form#formAddUser(name='addUser', method='post', action='/adduser')
+      input#inputUsername(type='text', name='username', placeholder='username')
+      input#inputPassword(type='password', name='password', placeholder='password')
+      button#btnSubmit(type='submit') Register

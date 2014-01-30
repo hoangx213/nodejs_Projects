@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form#formLogin(name='login', method='post', action='login')
+      input#loginUsername(type='text', name='username', placeholder='username')
+      input#loginPassword(type='password', name='password', placeholder='password')
+      button#btnLogin(type='submit') Login
+  br
+  p You are a new user?
+  form(action='newuser', method='get')
+      button#btnRegister(type='submit') Sign up
